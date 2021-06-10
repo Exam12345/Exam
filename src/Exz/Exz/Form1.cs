@@ -20,19 +20,31 @@ namespace Exz
 
         private void button1_Click(object sender, EventArgs e)
         {
-            enterForm = new DialogForm();
-            BusesContainer buses = new BusesContainer((int)numericUpDown1.Value);
-            int[] arr;
-            arr = new int[3];
-            for(int i = 0; i < (int)numericUpDown1.Value; i++)
+            try
             {
-                DialogResult result = enterForm.ShowDialog();
-                if (result == DialogResult.Cancel)
+                if ((int)numericUpDown1.Value == 0)
+                {
+                    MessageBox.Show("Введи число больше 0","Ошибка", MessageBoxButtons.OK);
                     return;
+                }
+                enterForm = new DialogForm();
+                BusesContainer buses = new BusesContainer((int)numericUpDown1.Value);
+                int[] arr;
+                arr = new int[3];
+                for (int i = 0; i < (int)numericUpDown1.Value; i++)
+                {
+                    DialogResult result = enterForm.ShowDialog();
+                    if (result == DialogResult.Cancel)
+                        return;
                     Bus bus = new Bus(Convert.ToInt32(enterForm.textBox1.Text), enterForm.textBox2.Text, enterForm.textBox3.Text, Convert.ToInt32(enterForm.textBox4.Text));
                     buses.array_Bas[i] = bus;
+                }
+                buses.SaveToFile();
             }
-            buses.SaveToFile();
+            catch (FormatException)
+            {
+                MessageBox.Show("Ошибка,заполните поля","Ошибка",MessageBoxButtons.OK);
+            }
         }
     }
 }
