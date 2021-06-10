@@ -27,12 +27,12 @@ namespace Exz
             for(int i = 0; i < (int)numericUpDown1.Value; i++)
             {
                 DialogResult result = enterForm.ShowDialog();
-                if (result == DialogResult.OK)
-                {
-                    Bus bus = new Bus(Convert.ToInt32(enterForm.textBox1.Text), enterForm.textBox2.Text, enterForm.textBox3.Text, Convert.ToInt32(enterForm.textBox1.Text));
+                if (result == DialogResult.Cancel)
+                    return;
+                    Bus bus = new Bus(Convert.ToInt32(enterForm.textBox1.Text), enterForm.textBox2.Text, enterForm.textBox3.Text, Convert.ToInt32(enterForm.textBox4.Text));
                     buses.array_Bas[i] = bus;
-                 }
             }
+            buses.SaveToFile();
         }
     }
 }
