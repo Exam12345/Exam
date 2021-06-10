@@ -12,9 +12,14 @@ namespace Exz
 {
     public partial class DialogForm : Form
     {
+        public int ArraySize { get; set; }
         public DialogForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

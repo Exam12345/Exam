@@ -8,3 +8,4 @@ C:\Users\Максим\src\Exz\Exz\obj\Debug\Exz.csproj.GenerateResource.cache
 C:\Users\Максим\src\Exz\Exz\obj\Debug\Exz.csproj.CoreCompileInputs.cache
 C:\Users\Максим\src\Exz\Exz\obj\Debug\Exz.exe
 C:\Users\Максим\src\Exz\Exz\obj\Debug\Exz.pdb
+C:\Users\Максим\src\Exz\Exz\obj\Debug\Exz.DialogForm.resources
