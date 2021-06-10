@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Exz
 {
-    public partial class Main : Form
+    public partial class DialogForm : Form
     {
-        public Main()
+        public DialogForm()
         {
             InitializeComponent();
         }
